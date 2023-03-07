@@ -1,7 +1,5 @@
-%% This produces the results of the Numerical Example in the paper
-% This ouputs a figure corresponding to the fast switching signal, in order
-% to get the second figure corresponding to the slow swtiching signal,
-% check line 125.
+%% This produces a result in the Numerical Example in the paper
+% This ouputs a figure corresponding to the slow rate switching signal.
 %% define system and fix parameters
 clear all;clc;
 rhoo=1.5;lambda=0.1; %fix \rho and \lambda
