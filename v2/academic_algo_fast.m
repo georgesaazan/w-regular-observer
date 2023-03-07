@@ -1,7 +1,5 @@
-%% This produces the results of the Numerical Example in the paper
-% This ouputs a figure corresponding to the fast switching signal, in order
-% to get the second figure corresponding to the slow swtiching signal,
-% check line 125.
+%% This produces a result in the Numerical Example in the paper
+% This ouputs a figure corresponding to the fast switching signal.
 %% define system and fix parameters
 clear all;clc;
 rhoo=1.5;lambda=0.1; %fix \rho and \lambda
@@ -263,7 +261,7 @@ st=to;
 %% Plotting stuff
 figure;
 % Plot 4*1 subfigures on the same figure
-subplot1=subplot(4,1,1);% Plot the switching signal \theta_t
+subplot1=subplot(3,1,1);% Plot the switching signal \theta_t
 stairs([0:N],theta,'LineWidth',2)
 % accept=(categorical(st)==categorical(st(1)));
 % time=[0:N];
@@ -275,7 +273,7 @@ xlabel('t','FontSize',14)
 ylabel('\theta(t)','FontSize',14)
 
 
-subplot2=subplot(4,1,2);% Plot the automaton states q_t
+subplot2=subplot(3,1,2);% Plot the automaton states q_t
 stairs(0:N,categorical(st),'LineWidth',2);
 accept=(categorical(st)==categorical(st(1)));
 time=[0:N];
@@ -285,12 +283,12 @@ set(subplot2,'FontSize',12);
 xlabel('t','FontSize',14)
 ylabel('q(t)','FontSize',14)
 
- subplot(4,1,3);% Plot the switching signal \theta_t
- stairs([0:N],kappa./[0:N])
- xlabel('t')
- ylabel('k(t)/t')
+ %subplot(4,1,3);% Plot the switching signal \theta_t
+ %stairs([0:N],kappa./[0:N])
+ %xlabel('t')
+ %ylabel('k(t)/t')
 
-subplot3=subplot(4,1,4); % Plot the Lyapunov function V(q_t,x_t)
+subplot3=subplot(3,1,3); % Plot the Lyapunov function V(q_t,x_t)
 stairs(0:N,V1(1:N+1),'LineWidth',2)
 set(gca,'YScale','log');
 hold on;
